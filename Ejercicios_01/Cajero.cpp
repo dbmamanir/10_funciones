@@ -1,8 +1,21 @@
 #include <iostream>
 using namespace std;
+
+//variable global del saldo
+int saldo=0;
+
+//funciones a llamar
 void depositar ();
 void retirar ();
 void mostrarSaldo ();
+void menu();
+
+//funcion principal
+int main (){
+	menu ();
+	return 0;
+}
+
 void menu (){
 	int opcion;
 	do {
@@ -15,30 +28,23 @@ void menu (){
 		cin>>opcion;
 		switch (opcion){
 			case 1:
-				//depositar ();
+				depositar ();
 				break;
 			case 2:
-				//retirar ();
+				retirar ();
 				break;
 			case 3:
-				//mostrarSaldo ();
+				mostrarSaldo ();
 				break;
 			case 4:
 				cout<<"Saliendo..."<<endl;
 				break;
 			default:
-				cout<<"Opcion no valida.\nIntente de nuevo."		
+				cout<<"Opcion no valida.\nIntente de nuevo.";		
 		}
 	} while (opcion !=4);
 }
 
-int main (){
-	menu ();
-	return 0;
-}
-
-//variable global del saldo
-int saldo=0;
 
 //depositar el dinero
 void depositar(){
